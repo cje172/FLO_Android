@@ -4,8 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/82103/AndroidStudioProjects/FLO/app/src/main/res/drawable/btm_color_selector.xml" value="0.265625" />
+        <entry key="..\:/Users/82103/AndroidStudioProjects/FLO/app/src/main/res/drawable/textview_background_radius.xml" value="0.265625" />
+        <entry key="..\:/Users/82103/AndroidStudioProjects/FLO/app/src/main/res/drawable/textview_background_select_color_radius.xml" value="0.265625" />
         <entry key="..\:/Users/82103/AndroidStudioProjects/FLO/app/src/main/res/layout/activity_main.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/82103/AndroidStudioProjects/FLO/app/src/main/res/layout/activity_song.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/82103/AndroidStudioProjects/FLO/app/src/main/res/layout/fragment_album.xml" value="0.2" />
+        <entry key="..\:/Users/82103/AndroidStudioProjects/FLO/app/src/main/res/layout/fragment_banner.xml" value="0.16847826086956522" />
+        <entry key="..\:/Users/82103/AndroidStudioProjects/FLO/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/82103/AndroidStudioProjects/FLO/app/src/main/res/layout/fragment_song.xml" value="0.16847826086956522" />
+        <entry key="..\:/Users/82103/AndroidStudioProjects/FLO/app/src/main/res/layout/fragment_video.xml" value="0.16847826086956522" />
+        <entry key="..\:/Users/82103/AndroidStudioProjects/FLO/app/src/main/res/layout/frgment_detail.xml" value="0.16847826086956522" />
+        <entry key="..\:/Users/82103/AndroidStudioProjects/FLO/app/src/main/res/layout/item_album.xml" value="0.16847826086956522" />
         <entry key="..\:/Users/82103/AndroidStudioProjects/FLO/app/src/main/res/menu/bottom_nav_menu.xml" value="0.24947916666666667" />
       </map>
     </option>
