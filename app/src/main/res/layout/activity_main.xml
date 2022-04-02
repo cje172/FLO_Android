@@ -10,7 +10,6 @@
         android:id="@+id/main_frm"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-
         app:layout_constraintBottom_toTopOf="@id/main_player_cl"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,7 +35,7 @@
                 android:id="@+id/mainMiniplayerTitleTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="제목"
+                android:text="라일락"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
 
@@ -44,7 +43,7 @@
                 android:id="@+id/mainMiniplayerSingerTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="가수"
+                android:text="아이유 (IU)"
                 android:textSize="12sp" />
 
         </LinearLayout>

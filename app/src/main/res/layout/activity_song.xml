@@ -59,9 +59,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif"
         android:text="라일락"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/song_singer_name_tv"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,32 +76,43 @@
         android:layout_marginBottom="20dp"
         android:text="아이유 (IU)"
         android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/song_album_iv"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/song_album_cv"
         app:layout_constraintEnd_toEndOf="@+id/song_music_title_tv"
         app:layout_constraintStart_toStartOf="@+id/song_music_title_tv"
         app:layout_constraintTop_toBottomOf="@+id/song_music_title_tv" />
 
     <ImageView
         android:id="@+id/song_singer_more_iv"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:scaleType="fitXY"
         android:src="@drawable/btn_main_arrow_more"
         app:layout_constraintBottom_toBottomOf="@+id/song_singer_name_tv"
         app:layout_constraintStart_toEndOf="@+id/song_singer_name_tv"
-        app:layout_constraintTop_toTopOf="@+id/song_singer_name_tv" />
+        app:layout_constraintTop_toTopOf="@+id/song_singer_name_tv"
+        app:tint="@color/colorPrimaryGrey" />
 
 
-    <ImageView
-        android:id="@+id/song_album_iv"
-        android:layout_width="280dp"
-        android:layout_height="280dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/img_album_exp2"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/song_album_cv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
         app:layout_constraintBottom_toTopOf="@+id/song_music_lyrics_01_iv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/song_singer_more_iv" />
+        app:layout_constraintTop_toBottomOf="@+id/song_singer_more_iv">
+
+        <ImageView
+            android:id="@+id/song_album_iv"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_album_exp2" />
+
+    </androidx.cardview.widget.CardView>
+
 
     <TextView
         android:id="@+id/song_music_lyrics_01_iv"
@@ -109,9 +121,9 @@
         android:layout_marginTop="20dp"
         android:text="나리는 꽃가루에"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/song_album_iv"
-        app:layout_constraintStart_toStartOf="@+id/song_album_iv"
-        app:layout_constraintTop_toBottomOf="@+id/song_album_iv" />
+        app:layout_constraintEnd_toEndOf="@+id/song_album_cv"
+        app:layout_constraintStart_toStartOf="@+id/song_album_cv"
+        app:layout_constraintTop_toBottomOf="@+id/song_album_cv" />
 
     <TextView
         android:id="@+id/song_music_lyrics_02_iv"
@@ -131,8 +143,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/song_progress_sb"
-        app:layout_constraintEnd_toEndOf="@+id/song_album_iv"
-        app:layout_constraintStart_toStartOf="@+id/song_album_iv"
+        app:layout_constraintEnd_toEndOf="@+id/song_album_cv"
+        app:layout_constraintStart_toStartOf="@+id/song_album_cv"
         app:layout_constraintTop_toBottomOf="@+id/song_music_lyrics_02_iv">
 
         <ImageView

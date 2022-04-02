@@ -4,15 +4,143 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="상세정보 프래그먼트"
-        android:textSize="30sp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/detail_album_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="앨범명"
+                android:textSize="14sp"
+                android:textColor="#333"
+                app:layout_constraintEnd_toStartOf="@+id/detail_album_name_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/detail_album_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:text="IU 5th Album 'LILAC'"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/detail_album_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/detail_artist_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:text="아티스트"
+                android:textSize="14sp"
+                android:textColor="#333"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_album_tv" />
+
+            <TextView
+                android:id="@+id/detail_artist_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="아이유 (IU)"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/detail_album_name_tv"
+                app:layout_constraintTop_toBottomOf="@+id/detail_album_name_tv" />
+
+            <TextView
+                android:id="@+id/detail_distributor_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:text="발매사"
+                android:textColor="#333"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_artist_tv" />
+
+            <TextView
+                android:id="@+id/detail_distributor_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="카카오엔터테인먼트"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/detail_artist_name_tv"
+                app:layout_constraintTop_toBottomOf="@+id/detail_artist_name_tv" />
+
+            <TextView
+                android:id="@+id/detail_agency_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:text="기획사"
+                android:textColor="#333"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_distributor_tv" />
+
+            <TextView
+                android:id="@+id/detail_agency_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="EDAM엔터테인먼트"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/detail_distributor_name_tv"
+                app:layout_constraintTop_toBottomOf="@+id/detail_distributor_name_tv" />
+
+            <TextView
+                android:id="@+id/detail_album_info_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="28dp"
+                android:text="앨범정보"
+                android:textSize="14sp"
+                android:textColor="#333"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_agency_tv" />
+
+            <TextView
+                android:id="@+id/detail_album_info_content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="15dp"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/detail_album_info"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_album_info_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
