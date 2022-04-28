@@ -6,25 +6,24 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.viewpager2.widget.ViewPager2
-import com.example.flo.databinding.FragmentHomeBinding
+import com.example.flo.databinding.FragmentSaveBinding
 import com.google.gson.Gson
 
-class HomeFragment : Fragment() {
+class SaveFragment : Fragment() {
 
-    lateinit var binding: FragmentHomeBinding
+    lateinit var binding: FragmentSaveBinding
     private var albumDatas = ArrayList<Album>()
+    private var gson: Gson = Gson()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding = FragmentSaveBinding.inflate(inflater, container, false)
 
-//        binding.homeAlbum01Iv.setOnClickListener {
-//            (context as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.main_frm, AlbumFragment()).commitAllowingStateLoss()
-//        }
+        val albumJson = arguments?.getString("album")
+        val album = gson.fromJson(albumJson, Album::class.java)
 
         // 데이터 리스트 생성 더머 데이터
         albumDatas.apply {
@@ -37,28 +36,20 @@ class HomeFragment : Fragment() {
         }
 
         // 어댑터와 데이터 리스트 연결
-        val albumRVAdapter = AlbumRVAdapter(albumDatas)
-        binding.homeTodayMusicAlbumRv.adapter = albumRVAdapter
-        binding.homeTodayMusicAlbumRv.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        val saveRVAdapter = SaveRVAdapter(albumDatas)
+        binding.lockerSaveMusicRv.adapter = saveRVAdapter
+        binding.lockerSaveMusicRv.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
-        albumRVAdapter.setMyItemClickListener(object : AlbumRVAdapter.MyItemClickListener {
+        saveRVAdapter.setMyItemClickListener(object : SaveRVAdapter.MyItemClickListener {
             override fun onItemClick(album: Album) {
                 changeAlbumFragment(album)
             }
 
             override fun onRemoveAlbum(position: Int) {
-                albumRVAdapter.removeItem(position)
+                saveRVAdapter.removeItem(position)
             }
         })
-
-        val bannerAdapter = BannerVPAdapter(this)
-        bannerAdapter.addFragment(BannerFragment(R.drawable.img_home_viewpager_exp))
-        bannerAdapter.addFragment(BannerFragment(R.drawable.img_home_viewpager_exp2))
-        bannerAdapter.addFragment(BannerFragment(R.drawable.img_home_viewpager_exp3))
-
-        binding.homeBannerVp.adapter = bannerAdapter
-        binding.homeBannerVp.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
         return binding.root
     }
@@ -74,4 +65,5 @@ class HomeFragment : Fragment() {
             })
             .commitAllowingStateLoss()
     }
+
 }

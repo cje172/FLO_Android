@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginBottom="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_album_cover_img_cardView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/item_album_cover_img_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_album_exp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/item_album_play_img_iv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/widget_black_play"
+        app:layout_constraintBottom_toBottomOf="@id/item_album_cover_img_cardView"
+        app:layout_constraintEnd_toEndOf="@+id/item_album_cover_img_cardView" />
+
+    <TextView
+        android:id="@+id/item_album_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="LILAC"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/item_album_singer_tv"
+        app:layout_constraintStart_toEndOf="@id/item_album_cover_img_cardView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_mp3_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MP3"
+        android:textSize="8sp"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="1dp"
+        android:background="@drawable/textview_background_radius2"
+        android:textColor="#a8a8a8"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_album_cover_img_cardView"
+        app:layout_constraintTop_toBottomOf="@+id/item_album_title_tv" />
+
+    <TextView
+        android:id="@+id/item_album_singer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="아이유 (IU)"
+        android:textColor="#a8a8a8"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_mp3_logo"
+        app:layout_constraintTop_toBottomOf="@id/item_album_title_tv" />
+
+    <ImageView
+        android:id="@+id/song_play_iv"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/btn_miniplayer_play"
+        app:layout_constraintBottom_toBottomOf="@+id/item_album_cover_img_cardView"
+        app:layout_constraintEnd_toStartOf="@+id/song_delete_iv"
+        app:layout_constraintTop_toTopOf="@+id/item_album_cover_img_cardView" />
+
+    <ImageView
+        android:id="@+id/song_delete_iv"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/btn_player_more"
+        app:layout_constraintBottom_toBottomOf="@+id/item_album_cover_img_cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/item_album_cover_img_cardView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

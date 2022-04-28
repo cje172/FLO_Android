@@ -94,7 +94,7 @@
             android:layout_width="180dp"
             android:layout_height="180dp"
             android:scaleType="fitXY"
-            android:src="@drawable/img_album_exp2" />
+            android:src="@drawable/img_album_exp" />
 
     </androidx.cardview.widget.CardView>
 

@@ -35,13 +35,16 @@ class AlbumFragment : Fragment() {
         binding.songLalacLayout.setOnClickListener {
             Toast.makeText(activity, "LILAC", Toast.LENGTH_SHORT).show()
         }
-
-         */
+        */
+        binding.albumBackIv.setOnClickListener {
+            (context as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.main_frm, HomeFragment())
+                .commitAllowingStateLoss()
+        }
 
         val albumAdapter = AlbumVPAdapter(this)
         binding.albumContentVp.adapter = albumAdapter
-        TabLayoutMediator(binding.albumContentTb, binding.albumContentVp) {
-            tab, position ->
+        TabLayoutMediator(binding.albumContentTb, binding.albumContentVp) { tab, position ->
             tab.text = information[position]
         }.attach()
 
