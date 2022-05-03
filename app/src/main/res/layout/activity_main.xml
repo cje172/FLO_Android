@@ -73,6 +73,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
+                android:id="@+id/main_miniplayer_previous_iv"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/btn_miniplayer_previous" />
@@ -90,8 +91,8 @@
                 android:src="@drawable/btn_miniplay_pause"
                 android:visibility="gone" />
 
-
             <ImageView
+                android:id="@+id/main_miniplayer_next_iv"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/btn_miniplayer_next" />
