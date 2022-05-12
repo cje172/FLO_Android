@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/82103/AndroidStudioProjects/Android_Flo/app/src/main/res/drawable/button_background_black_color.xml" value="0.215625" />
+        <entry key="..\:/Users/82103/AndroidStudioProjects/Android_Flo/app/src/main/res/drawable/button_background_flo_color.xml" value="0.215625" />
+        <entry key="..\:/Users/82103/AndroidStudioProjects/Android_Flo/app/src/main/res/drawable/button_background_white_color.xml" value="0.215625" />
+        <entry key="..\:/Users/82103/AndroidStudioProjects/Android_Flo/app/src/main/res/layout/activity_login.xml" value="0.12447916666666667" />
+        <entry key="..\:/Users/82103/AndroidStudioProjects/Android_Flo/app/src/main/res/layout/activity_signup.xml" value="0.12447916666666667" />
+        <entry key="..\:/Users/82103/AndroidStudioProjects/Android_Flo/app/src/main/res/layout/fragment_locker.xml" value="0.12447916666666667" />
+        <entry key="..\:/Users/82103/AndroidStudioProjects/Android_Flo/app/src/main/res/layout/fragment_locker_savedalbum.xml" value="0.12447916666666667" />
+        <entry key="..\:/Users/82103/AndroidStudioProjects/Android_Flo/app/src/main/res/layout/item_locker_album.xml" value="0.12447916666666667" />
         <entry key="..\:/Users/82103/AndroidStudioProjects/FLO/app/src/main/res/drawable/btm_color_selector.xml" value="0.265625" />
         <entry key="..\:/Users/82103/AndroidStudioProjects/FLO/app/src/main/res/drawable/img_album_radius.xml" value="0.265625" />
         <entry key="..\:/Users/82103/AndroidStudioProjects/FLO/app/src/main/res/drawable/item_song.xml" value="0.1" />

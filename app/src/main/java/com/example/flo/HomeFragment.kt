@@ -1,7 +1,7 @@
 package com.example.flo
 
-import MainActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +16,8 @@ class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
     private var albumDatas = ArrayList<Album>()
 
+    private lateinit var songDB : SongDatabase
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -28,14 +30,9 @@ class HomeFragment : Fragment() {
 //        }
 
         // 데이터 리스트 생성 더머 데이터
-        albumDatas.apply {
-            add(Album("Lilac", "아이유 (IU)", R.drawable.img_album_exp))
-            add(Album("Fool", "WINNER", R.drawable.img_album_exp2))
-            add(Album("너를 사랑하고 있어", "백현 (BAEKHYUN)", R.drawable.img_album_exp3))
-            add(Album("Next Level", "aespa", R.drawable.img_album_exp4))
-            add(Album("낙하 (with 아이유)", "AKMU (악뮤)", R.drawable.img_album_exp5))
-            add(Album("LOVE DIVE", "IVE (아이브)", R.drawable.img_album_exp6))
-        }
+        songDB = SongDatabase.getInstance(requireContext())!!
+        albumDatas.addAll(songDB.albumDao().getAlbums()) // songDB에서 album list를 가져옵니다.
+        Log.d("albumlist", albumDatas.toString())
 
         // 어댑터와 데이터 리스트 연결
         val albumRVAdapter = AlbumRVAdapter(albumDatas)
