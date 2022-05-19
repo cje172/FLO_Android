@@ -3,6 +3,7 @@ package com.example.flo
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flo.databinding.ActivityLoginBinding
@@ -89,8 +90,9 @@ class LoginActivity : AppCompatActivity(), LoginView {
         }
     }
 
-    override fun onLoginFailure() {
+    override fun onLoginFailure(message: String) {
         // 실패처리
-        Toast.makeText(this, "회원 정보가 존재하지 않습니다.", Toast.LENGTH_SHORT).show()
+        binding.loginErrorTv.visibility = View.VISIBLE
+        binding.loginErrorTv.text = message
     }
 }

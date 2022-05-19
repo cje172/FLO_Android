@@ -82,7 +82,8 @@ class SignUpActivity : AppCompatActivity(), SignUpView {
         finish()
     }
 
-    override fun onSignUpFailure() {
-        TODO("Not yet implemented")
+    override fun onSignUpFailure(message: String) {
+        binding.signUpEmailErrorTv.visibility = View.VISIBLE
+        binding.signUpEmailErrorTv.text = message
     }
 }

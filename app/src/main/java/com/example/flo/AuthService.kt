@@ -26,7 +26,7 @@ class AuthService {
                 val resp: AuthResponse = response.body()!!
                 when (resp.code) {
                     1000 -> signUpView.onSignUpSuccess()
-                    else -> signUpView.onSignUpFailure()
+                    else -> signUpView.onSignUpFailure(resp.message)
                 }
             }
 
@@ -46,7 +46,7 @@ class AuthService {
                 val resp: AuthResponse = response.body()!!
                 when (val code = resp.code) {
                     1000 -> loginView.onLoginSuccess(code, resp.result!!)
-                    else -> loginView.onLoginFailure()
+                    else -> loginView.onLoginFailure(resp.message)
                 }
             }
 

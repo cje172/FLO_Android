@@ -47,16 +47,16 @@
         android:background="#a8a8a8"
         app:layout_constraintEnd_toEndOf="@+id/login_id_et"
         app:layout_constraintStart_toStartOf="@+id/login_id_et"
-        app:layout_constraintTop_toBottomOf="@+id/login_id_et"/>
+        app:layout_constraintTop_toBottomOf="@+id/login_id_et" />
 
     <TextView
         android:id="@+id/login_at_sign_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
         android:text="\@"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/login_id_et"
         app:layout_constraintEnd_toEndOf="@+id/login_flo_logo_iv"
         app:layout_constraintStart_toStartOf="@+id/login_flo_logo_iv"
@@ -85,7 +85,7 @@
         android:background="#a8a8a8"
         app:layout_constraintEnd_toEndOf="@+id/login_direct_input_et"
         app:layout_constraintStart_toStartOf="@+id/login_direct_input_et"
-        app:layout_constraintTop_toBottomOf="@+id/login_direct_input_et"/>
+        app:layout_constraintTop_toBottomOf="@+id/login_direct_input_et" />
 
     <ImageView
         android:id="@+id/login_email_list_iv"
@@ -120,7 +120,19 @@
         android:background="#a8a8a8"
         app:layout_constraintEnd_toEndOf="@+id/login_password_et"
         app:layout_constraintStart_toStartOf="@+id/login_password_et"
-        app:layout_constraintTop_toBottomOf="@+id/login_password_et"/>
+        app:layout_constraintTop_toBottomOf="@+id/login_password_et" />
+
+    <TextView
+        android:id="@+id/login_error_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="#F80202"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/login_sign_in_btn"
+        app:layout_constraintStart_toStartOf="@id/login_password_underscore_view"
+        app:layout_constraintTop_toBottomOf="@id/login_password_underscore_view" />
 
     <ImageView
         android:id="@+id/login_hide_password_iv"
